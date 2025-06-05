@@ -1,54 +1,34 @@
-# React + TypeScript + Vite
+# User Viewer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение на React + TypeScript, което извлича списък с потребители от публичен API и ги показва.
 
-Currently, two official plugins are available:
+## Инструкции за стартиране
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Инсталиране на зависимости:
 
-## Expanding the ESLint configuration
+```bash
+npm install
+## Какво прави приложението
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Зарежда списък с потребители от [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)
+- Показва "Loading..." съобщение докато данните се зареждат
+- Показва съобщение за грешка при проблем с връзката
+- Показва списък с потребители с име и имейл, като използва отделни компоненти `UserList` и `UserCard`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Технологии и инструменти
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React  
+- TypeScript  
+- Vite  
+- Fetch API за извличане на данни
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Команди
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- `npm install` — инсталира зависимостите  
+- `npm run dev` — стартира приложението локално в режим на разработка
+
+## Автор
+
+Савина | [GitHub профил](https://github.com/savina-mollova)  
+📧 savina.mollova@gmail.com
+
