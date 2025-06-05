@@ -41,4 +41,5 @@ npm run dev
 
 ## Автор
 
-Савина | [GitHub профил](https://github.com/your-username)
+Савина | [GitHub профил](https://github.com/savina-mollova)
+📧 savina.mollova@gmail.com
